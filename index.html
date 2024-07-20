@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./style/styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhoneBook</title>
+</head>
+
+<body>
+  <header>
+    <section id="flexit">
+      <div id="logopic">
+        <figure>
+          <a href="index.html"><img src="./images/logo2.png" alt="phone book"  title="phone book"></a>
+        </figure>
+      </div>
+      <div id="headline">
+        <h1>PhoneBook</h1>
+      </div>
+      <div id="serching"> 
+        <input type="text" id="serchIn"  placeholder="Enter your serch" maxlength="30">
+        <button id="searchBtn"><img id="searchPic" onclick="serchSome" src="images/search2.png" alt="serch"></button>
+      </div>
+    </section>
+  </header>
+  <main>
+    <ul>
+        <li id="categories">
+        <span class="pic"></span>
+        <span class="fname">First name</span>
+        <span class="lname">Last name</span>
+        <span class="mail">Email address</span>
+        <span class="home">Home address</span>
+        <span class="phonenum">Phone number</span>
+        <span class="btnDelet"><button class="btnD" type="button" onclick="deleteAll()">Delete All</button></span>
+        <span class="btnEdit"></span>
+      </li>
+      
+    </ul>
+  
+    
+    <button class="open-button" onclick="openForm()"><img src="images/plus2.png" title="add" alt="add"></button>
+    <div id="wrapper" onClick="closeModal(event)">
+      
+      <div class="form-popup" id="myForm">
+        
+        <h1></h1>
+        <button ><img src="images/closeBtn.png" alt="close" id="closeBtn"></button>
+        <form  class="form-container">
+          <div class="item">
+            <label >First Name:</label>
+           <input type="text" id="firsName" name="firsName" placeholder="Enter your first name" maxlength="30">
+          </div>
+          
+          <div class="item">
+            <label>Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" maxlength="30" required>
+          </div>
+          <div class="item">
+            <label ><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" id="Email"  required>
+          </div>
+          <div class="item">
+            <label >Home address:</label>
+            <input type="text" id="homeAddress" name="homeAddress" placeholder="Enter your home address" maxlength="80">
+          </div>
+          <div class="item">
+            <label >Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" >
+          </div>
+          <div id="popUpBtn">
+          <button type="button" id="change" class="btn" onclick="add()">save</button>
+          <button type="button" class="btn" onclick="closeForm()">Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p> &copy; Shahaf David and Adiel Sofia Mendelson</p>
+    
+    
+  </footer>
+  <script src="js.js"></script>
+  
+
+</body>
+
+</html>
